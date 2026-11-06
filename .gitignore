@@ -1,0 +1,10 @@
+.DS_Store
+._*
+*.o
+*.dSYM/
+smooth_O0
+smooth_O3
+smooth_native
+smooth_O3_native
+*.trace/
+*.zip
