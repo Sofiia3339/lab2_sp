@@ -1,0 +1,82 @@
+Analysis of sampling smooth_O0 (pid 24703) every 1 millisecond
+Process:         smooth_O0 [24703]
+Path:            /Users/USER/Documents/*/smooth_O0
+Load Address:    0x10ed32000
+Identifier:      smooth_O0
+Version:         0
+Code Type:       X86-64
+Platform:        macOS
+Parent Process:  zsh [23968]
+Target Type:     live task
+
+Date/Time:       2026-11-03 00:14:55.748 +0200
+Launch Time:     2026-11-03 00:14:55.679 +0200
+OS Version:      macOS 26.6.2 (25G83)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         30.9M
+Physical footprint (peak):  30.9M
+Idle exit:                  untracked
+----
+
+Call graph:
+    4057 Thread_897774   DispatchQueue_1: com.apple.main-thread  (serial)
+      4057 start  (in dyld) + 3240  [0x7ff80cca71c8]
+        4057 main  (in smooth_O0) + 338  [0x10ed325c2]  smooth.c:76
+          2710 smooth  (in smooth_O0) + 130,126,...  [0x10ed32732,0x10ed3272e,...]  smooth.c:25
+          800 smooth  (in smooth_O0) + 79,64,...  [0x10ed326ff,0x10ed326f0,...]  smooth.c:24
+          547 smooth  (in smooth_O0) + 143,46,...  [0x10ed3273f,0x10ed326de,...]  smooth.c:23
+
+Total number in stack (recursive counted multiple, when >=5):
+
+Sort by top of stack, same collapsed (when >= 5):
+        smooth  (in smooth_O0)        4057
+
+Binary Images:
+       0x10ed32000 -        0x10ed328cf +smooth_O0 (0) <943546B3-7386-41BF-9BC7-BB4F8E1441E6> /Users/*/Documents/*/smooth_O0
+    0x7ff80cc20000 -     0x7ff80cc6438b  libobjc.A.dylib (951.7) <F3E59C4B-890F-3381-82C1-0E29B08226A3> /usr/lib/libobjc.A.dylib
+    0x7ff80cc65000 -     0x7ff80cc93a9f  libdyld.dylib (1387) <576B6A23-6A9E-3910-B3E5-0790731BB4AB> /usr/lib/system/libdyld.dylib
+    0x7ff80cc94000 -     0x7ff80cd4084f  dyld (1.0.0 - 1387) <CF55CA34-3ECB-38F3-9E3E-E20592C197BE> /usr/lib/dyld
+    0x7ff80cd41000 -     0x7ff80cd446e8  libsystem_blocks.dylib (96) <33F2AE3F-12EE-3467-8481-698BC42C52F1> /usr/lib/system/libsystem_blocks.dylib
+    0x7ff80cd45000 -     0x7ff80cd98041  libxpc.dylib (3102.160.5) <19C9DA96-742F-3A7D-A22D-E1DF683CE47B> /usr/lib/system/libxpc.dylib
+    0x7ff80cd99000 -     0x7ff80cdb8749  libsystem_trace.dylib (1861.160.4) <79D484CC-C253-3348-B56E-366A4A97D051> /usr/lib/system/libsystem_trace.dylib
+    0x7ff80cdb9000 -     0x7ff80ce7f94f  libcorecrypto.dylib (1922.160.10) <6E14793F-E8ED-31CE-B255-603A9CFF4CF3> /usr/lib/system/libcorecrypto.dylib
+    0x7ff80ce80000 -     0x7ff80ced1dcf  libsystem_malloc.dylib (812.160.5) <1D09BF46-BD85-3C22-9CB9-D04963024069> /usr/lib/system/libsystem_malloc.dylib
+    0x7ff80ced2000 -     0x7ff80cf19d91  libdispatch.dylib (1542.160.2) <EEDF9EFE-1B9B-39AC-B37F-BA6F1FA18CEC> /usr/lib/system/libdispatch.dylib
+    0x7ff80cf1a000 -     0x7ff80cf1cd43  libsystem_featureflags.dylib (103) <2AF93358-8BB8-3390-8847-994AB8425E86> /usr/lib/system/libsystem_featureflags.dylib
+    0x7ff80cf1d000 -     0x7ff80cfa4e9f  libsystem_c.dylib (1752.160.4) <D8E26E42-0A43-3361-B0A8-B45C3BB10F19> /usr/lib/system/libsystem_c.dylib
+    0x7ff80cfa5000 -     0x7ff80d02fb63  libc++.1.dylib (2100.43) <DC8BE9A5-9501-3439-9189-9E16C26DF6B3> /usr/lib/libc++.1.dylib
+    0x7ff80d030000 -     0x7ff80d0475f7  libc++abi.dylib (2100.43) <DC940B98-BF91-3E69-9821-7E2BBF9631CD> /usr/lib/libc++abi.dylib
+    0x7ff80d048000 -     0x7ff80d0865af  libsystem_kernel.dylib (12377.161.14) <0E16C3E3-E224-378F-9FDC-28BC144F39AF> /usr/lib/system/libsystem_kernel.dylib
+    0x7ff80d087000 -     0x7ff80d092ebf  libsystem_pthread.dylib (539.100.4) <A55CF178-EA25-3CC0-8BCD-A4209F2ACD1D> /usr/lib/system/libsystem_pthread.dylib
+    0x7ff80d093000 -     0x7ff80d09cebf  libsystem_platform.dylib (375.120.2) <CD621568-6D00-376A-B8DA-6B794DADAFE4> /usr/lib/system/libsystem_platform.dylib
+    0x7ff80d09d000 -     0x7ff80d0cb2a7  libsystem_info.dylib (600) <D5713F2F-7E03-3AEE-82DA-89F175842724> /usr/lib/system/libsystem_info.dylib
+    0x7ff810ad2000 -     0x7ff810adc70f  libsystem_darwin.dylib (1752.160.4) <15F72020-5373-3B02-B29D-B9F2D93FE254> /usr/lib/system/libsystem_darwin.dylib
+    0x7ff810f1a000 -     0x7ff810f2b2b7  libsystem_notify.dylib (348.160.3) <19A5D538-D6BE-34A2-B28D-7648B10CEB2B> /usr/lib/system/libsystem_notify.dylib
+    0x7ff813314000 -     0x7ff81332d4a7  libsystem_networkextension.dylib (2226.161.1) <75D4DD3E-69BB-3E37-82B3-4222BA907541> /usr/lib/system/libsystem_networkextension.dylib
+    0x7ff8133ab000 -     0x7ff8133c21bf  libsystem_asl.dylib (406) <478E2407-26A1-3545-AA66-B9E4806FDF5D> /usr/lib/system/libsystem_asl.dylib
+    0x7ff815192000 -     0x7ff815199c57  libsystem_symptoms.dylib (2169.160.3) <5B6FB9F4-F87A-3849-BE0B-A63706010384> /usr/lib/system/libsystem_symptoms.dylib
+    0x7ff819609000 -     0x7ff81963fa3b  libsystem_containermanager.dylib (725.160.3) <A00409FB-484B-3970-A4FD-85BB4960230E> /usr/lib/system/libsystem_containermanager.dylib
+    0x7ff81aa78000 -     0x7ff81aa7b90f  libsystem_configuration.dylib (1405.160.3) <198D5252-EA49-3D24-A345-474D0560D060> /usr/lib/system/libsystem_configuration.dylib
+    0x7ff81aa7c000 -     0x7ff81aa82bf7  libsystem_sandbox.dylib (2680.160.6) <A1A25866-BB0A-3525-9044-839F1EBCC15E> /usr/lib/system/libsystem_sandbox.dylib
+    0x7ff81c1b2000 -     0x7ff81c1b4dbb  libquarantine.dylib (196.160.2) <F734C4CD-5330-357E-B3B8-3721095096BE> /usr/lib/system/libquarantine.dylib
+    0x7ff81cac3000 -     0x7ff81cac998f  libsystem_coreservices.dylib (191.5.1) <B0BDCA58-7438-3E13-9C05-59660B573A77> /usr/lib/system/libsystem_coreservices.dylib
+    0x7ff81cfc0000 -     0x7ff81d02da97  libsystem_m.dylib (3312.100.1) <9DB423C5-F390-3129-8451-F530207EB049> /usr/lib/system/libsystem_m.dylib
+    0x7ff81d02f000 -     0x7ff81d03263f  libmacho.dylib (1387) <0A615DBA-558B-3500-86E9-5DE7DA349727> /usr/lib/system/libmacho.dylib
+    0x7ff81d04a000 -     0x7ff81d055f57  libcommonCrypto.dylib (600035) <D35EDE6C-94CA-3DCD-A906-ABD86DA57F77> /usr/lib/system/libcommonCrypto.dylib
+    0x7ff81d056000 -     0x7ff81d05e567  libunwind.dylib (2100.2) <8EDA0474-8AC2-37B8-B6B7-B4B712A6FA1F> /usr/lib/system/libunwind.dylib
+    0x7ff81d067000 -     0x7ff81d072a7f  libcopyfile.dylib (240.160.2.0.1) <E9D173D3-075B-3DB2-8204-0C56346FB9BC> /usr/lib/system/libcopyfile.dylib
+    0x7ff81d073000 -     0x7ff81d07aaff  libcompiler_rt.dylib (103.3) <C5CCBE5A-9844-3EF7-80A9-303679EA5AA3> /usr/lib/system/libcompiler_rt.dylib
+    0x7ff81d07b000 -     0x7ff81d07f76b  libsystem_collections.dylib (1752.160.4) <A22B7276-A6B6-35CC-8635-E502BE26FA95> /usr/lib/system/libsystem_collections.dylib
+    0x7ff81d080000 -     0x7ff81d083107  libsystem_secinit.dylib (168.100.7) <03FEC1A7-6AB4-3ED4-80A2-28AABFB4A95D> /usr/lib/system/libsystem_secinit.dylib
+    0x7ff81d084000 -     0x7ff81d08680f  libremovefile.dylib (85.100.6) <40EACBDA-A392-3D22-822D-AE6F3A0E4FE6> /usr/lib/system/libremovefile.dylib
+    0x7ff81d087000 -     0x7ff81d087b37  libkeymgr.dylib (31) <963CDDED-015D-3B77-8B30-B0CE28AA7B8B> /usr/lib/system/libkeymgr.dylib
+    0x7ff81d088000 -     0x7ff81d09062f  libsystem_dnssd.dylib (2881.160.4) <52521127-FB30-3A8E-A364-EE73C6A18130> /usr/lib/system/libsystem_dnssd.dylib
+    0x7ff81d091000 -     0x7ff81d096003  libcache.dylib (95) <9F17FD1D-C57E-32CF-A3B8-37BF7D4FA9E6> /usr/lib/system/libcache.dylib
+    0x7ff81d097000 -     0x7ff81d098b2b  libSystem.B.dylib (1356) <3229D4F7-FE40-3BE4-BCB9-F21F1C734B21> /usr/lib/libSystem.B.dylib
+    0x7ffe147b5000 -     0x7ffe147bc56f  libRosetta.dylib (367.9) <7A1D9CE0-41E8-3D9A-B8A4-FCC3F43674B5> /usr/lib/libRosetta.dylib
+    0x7ffe1652c000 -     0x7ffe16530003  libsystem_darwindirectory.dylib (122) <81911493-D73C-3AE8-B547-00236D7BFC3B> /usr/lib/system/libsystem_darwindirectory.dylib
+    0x7ffe16531000 -     0x7ffe1653b253  libsystem_eligibility.dylib (319.160.17) <41D00E59-199C-3C4B-A641-36794AD637E7> /usr/lib/system/libsystem_eligibility.dylib
+    0x7ffe1653c000 -     0x7ffe16543ffb  libsystem_sanitizers.dylib (26.1) <81684A61-0905-3ED7-9872-C262429B0675> /usr/lib/system/libsystem_sanitizers.dylib
+    0x7ffe16544000 -     0x7ffe16544ba7  libsystem_trial.dylib (474.2.18.2) <C3DAE42B-23E1-3B50-8B7B-99F20C1D3FDE> /usr/lib/system/libsystem_trial.dylib
